@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp5x0llicvpja"]
+
+[ext_resource type="PackedScene" uid="uid://bdhs07tao2sci" path="res://scenes/player.tscn" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://djkm8804yc7j5" path="res://scripts/AirdropSpawner.cs" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://kj0q84mvq5td" path="res://scripts/Ground.cs" id="3_sugp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(1729.5, 278)
+
+[node name="main" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_0wfyh")]
+position = Vector2(535, 409)
+scale = Vector2(0.5, 0.5)
+
+[node name="Airdrop Spawner" type="Node2D" parent="."]
+texture_filter = 1
+position = Vector2(506, 0)
+script = ExtResource("2_jyhfs")
+
+[node name="Timer" type="Timer" parent="Airdrop Spawner"]
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_sugp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(584, 591)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+
+[connection signal="timeout" from="Airdrop Spawner/Timer" to="Airdrop Spawner" method="onTimeout"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="onEntered"]

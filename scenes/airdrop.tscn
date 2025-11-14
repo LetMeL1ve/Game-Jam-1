@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://du8p1aj2t6427"]
+
+[ext_resource type="Script" uid="uid://k8734ntnvd8d" path="res://scripts/Airdrop.cs" id="1_670h4"]
+[ext_resource type="Texture2D" uid="uid://cn1od7mw66qff" path="res://assets/box.png" id="2_670h4"]
+
+[node name="Airdrop" type="CharacterBody2D"]
+script = ExtResource("1_670h4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_670h4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-16, -12, -12, -16, 12, -16, 16, -12, 16, 12, 12, 16, -12, 16, -16, 12)
