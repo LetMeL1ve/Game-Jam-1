@@ -1,0 +1,60 @@
+[gd_scene load_steps=13 format=3 uid="uid://bxm6v80y6s0ei"]
+
+[ext_resource type="Texture2D" uid="uid://d1bhmh7xn5gra" path="res://assets/explosion/explosion1.png" id="1_hbmxj"]
+[ext_resource type="Texture2D" uid="uid://c0fxnuemsnhs1" path="res://assets/explosion/explosion2.png" id="2_xfoey"]
+[ext_resource type="Texture2D" uid="uid://bnagy2tbwxs4b" path="res://assets/explosion/explosion3.png" id="3_v8gpv"]
+[ext_resource type="Texture2D" uid="uid://c4k4mt3crsp3" path="res://assets/explosion/explosion4.png" id="4_cun36"]
+[ext_resource type="Texture2D" uid="uid://1d3ssetn6bvm" path="res://assets/explosion/explosion5.png" id="5_vk406"]
+[ext_resource type="Texture2D" uid="uid://b0y57j4laib2" path="res://assets/explosion/explosion6.png" id="6_6smmu"]
+[ext_resource type="Texture2D" uid="uid://c8h1tcibyitmv" path="res://assets/explosion/explosion7.png" id="7_l208b"]
+[ext_resource type="Texture2D" uid="uid://botkyrg6w5841" path="res://assets/explosion/explosion8.png" id="8_dvsvq"]
+[ext_resource type="Texture2D" uid="uid://cyq8geb1cr5by" path="res://assets/explosion/explosion9.png" id="9_4hpr0"]
+[ext_resource type="Texture2D" uid="uid://g77dy0u16twn" path="res://assets/explosion/explosion10.png" id="10_dcqkm"]
+[ext_resource type="Texture2D" uid="uid://birum1miqtadf" path="res://assets/explosion/explosion11.png" id="11_pw7mt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3oo6d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hbmxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xfoey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v8gpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cun36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vk406")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6smmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l208b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dvsvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4hpr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dcqkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pw7mt")
+}],
+"loop": false,
+"name": &"sky_explosion",
+"speed": 20.0
+}]
+
+[node name="explosion" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_3oo6d")
+animation = &"sky_explosion"

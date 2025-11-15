@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca5osa15h5bkg"]
+
+[ext_resource type="FontFile" uid="uid://b5b3ft61w7kt1" path="res://assets/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://b3u1wf1whq8c7" path="res://scripts/Settings.cs" id="1_r6d6q"]
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_r6d6q")
+
+[node name="Music Slider" type="HSlider" parent="."]
+offset_left = 397.0
+offset_top = 199.0
+offset_right = 961.0
+offset_bottom = 245.0
+value = 100.0
+
+[node name="Music" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 195.0
+offset_right = 193.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("1_5p8wc")
+theme_override_font_sizes/font_size = 40
+text = "MUSIC:"
+
+[node name="Value Label2" type="Label" parent="."]
+offset_left = 1007.0
+offset_top = 195.0
+offset_right = 1122.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("1_5p8wc")
+theme_override_font_sizes/font_size = 40
+text = "100%"
+
+[node name="SFX Slider" type="HSlider" parent="."]
+offset_left = 406.0
+offset_top = 362.0
+offset_right = 962.0
+offset_bottom = 408.0
+value = 100.0
+
+[node name="SFX" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 358.0
+offset_right = 335.0
+offset_bottom = 410.0
+theme_override_fonts/font = ExtResource("1_5p8wc")
+theme_override_font_sizes/font_size = 40
+text = "SOUND EFFECTS:"
+
+[node name="Value Label" type="Label" parent="."]
+offset_left = 1008.0
+offset_top = 358.0
+offset_right = 1123.0
+offset_bottom = 410.0
+theme_override_fonts/font = ExtResource("1_5p8wc")
+theme_override_font_sizes/font_size = 40
+text = "100%"
+
+[connection signal="value_changed" from="Music Slider" to="." method="onMusicChanged"]
+[connection signal="value_changed" from="SFX Slider" to="." method="onSFXChanged"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdhrgqn82iksu"]
+
+[ext_resource type="Texture2D" uid="uid://ce8mapi0dkuks" path="res://assets/abilities/ability_multishot.png" id="1_bjqj0"]
+[ext_resource type="Script" uid="uid://cwo6si5bnscia" path="res://scripts/Ability.cs" id="1_i60ff"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i60ff"]
+size = Vector2(24, 16)
+
+[node name="Ability" type="Area2D"]
+script = ExtResource("1_i60ff")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_bjqj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i60ff")

@@ -27,13 +27,14 @@ public partial class AirdropSpawner : Node2D
         PackedScene airdropScene = GD.Load<PackedScene>("res://scenes/airdrop.tscn");
         Airdrop airdrop = airdropScene.Instantiate<Airdrop>();
 
-        airdrop.Scale = new Vector2(1, 1);
+        airdrop.Scale = new Vector2(3, 3);
         airdrop.TextureFilter = TextureFilterEnum.Nearest;
 
         Random rd = new Random();
 
         int screenWidth = (int)GetViewportRect().Size.X;
         airdrop.Position = new Vector2(rd.Next(0, screenWidth), -50);
+        airdrop.Weight = (float)rd.NextDouble() + 0.2f;
 
         AddChild(airdrop);
     }

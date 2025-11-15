@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cctyyml1n11bu"]
+
+[ext_resource type="Texture2D" uid="uid://ctdadxoap1a5v" path="res://assets/gun.png" id="1_x77fm"]
+[ext_resource type="Script" uid="uid://4fc1gfphdgva" path="res://scripts/Gun.cs" id="2_og67c"]
+
+[node name="gun" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_x77fm")
+script = ExtResource("2_og67c")

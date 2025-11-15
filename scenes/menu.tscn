@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmbj17rxtphdr"]
+
+[ext_resource type="Script" uid="uid://cmjfpxb1546b6" path="res://scripts/Menu.cs" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://buo5u7s5t1cbp" path="res://assets/background.png" id="1_vjb58"]
+[ext_resource type="FontFile" uid="uid://b5b3ft61w7kt1" path="res://assets/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf" id="2_con2f"]
+
+[sub_resource type="StyleBoxFlat" id="main_button_style"]
+bg_color = Color(0.920995, 0.920995, 0.920995, 0.541176)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_con2f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1207.0
+offset_bottom = 692.0
+texture = ExtResource("1_vjb58")
+stretch_mode = 1
+
+[node name="Play" type="Button" parent="."]
+offset_left = 288.0
+offset_top = 40.5
+offset_right = 864.0
+offset_bottom = 202.5
+theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("main_button_style")
+theme_override_styles/normal = SubResource("main_button_style")
+text = "PLAY"
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 288.0
+offset_top = 243.0
+offset_right = 864.0
+offset_bottom = 405.0
+theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("main_button_style")
+theme_override_styles/normal = SubResource("main_button_style")
+text = "SETTINGS"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 288.0
+offset_top = 445.5
+offset_right = 864.0
+offset_bottom = 607.5
+theme_override_fonts/font = ExtResource("2_con2f")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("main_button_style")
+theme_override_styles/normal = SubResource("main_button_style")
+text = "QUIT"
+
+[connection signal="button_down" from="Play" to="." method="onPlayDown"]
+[connection signal="button_down" from="Settings" to="." method="onSettingsDown"]
+[connection signal="button_down" from="Quit" to="." method="onQuitDown"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://detwgo5ag1lrl"]
+
+[ext_resource type="FontFile" uid="uid://b5b3ft61w7kt1" path="res://assets/Momo_Trust_Display/MomoTrustDisplay-Regular.ttf" id="1_i2gav"]
+
+[node name="controls" type="Node2D"]
+
+[node name="HP label" type="Label" parent="."]
+offset_left = 1018.0
+offset_top = 9.0
+offset_right = 1141.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("1_i2gav")
+theme_override_font_sizes/font_size = 20
+text = "HP: 100/100"
