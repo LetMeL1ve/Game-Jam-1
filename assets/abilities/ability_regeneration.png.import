@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgc021npwsypn"
-path="res://.godot/imported/ability_timeslow.png-f95da274e77aad5502b95ad1a153f11a.ctex"
+uid="uid://c1y51sfjbtcjc"
+path="res://.godot/imported/ability_regeneration.png-305e947e200552ea596e936d610b262a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/abilities/ability_timeslow.png"
-dest_files=["res://.godot/imported/ability_timeslow.png-f95da274e77aad5502b95ad1a153f11a.ctex"]
+source_file="res://assets/abilities/ability_regeneration.png"
+dest_files=["res://.godot/imported/ability_regeneration.png-305e947e200552ea596e936d610b262a.ctex"]
 
 [params]
 

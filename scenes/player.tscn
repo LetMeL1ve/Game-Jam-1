@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bdhs07tao2sci"]
+[gd_scene load_steps=11 format=3 uid="uid://bdhs07tao2sci"]
 
 [ext_resource type="Script" uid="uid://dh02w1o814yx5" path="res://scripts/Player.cs" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bw5ebucus5577" path="res://assets/player/player_idle1.png" id="2_tuyoq"]
@@ -39,12 +39,16 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjrip"]
+size = Vector2(30, 29)
+
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_dqkch")
+debug_color = Color(0.905882, 0, 1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -54,3 +58,12 @@ frame_progress = 0.945024
 
 [node name="gun" parent="." instance=ExtResource("7_fjrip")]
 position = Vector2(11, 5)
+
+[node name="catcher" type="Area2D" parent="."]
+position = Vector2(-3, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="catcher"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_fjrip")
+
+[connection signal="body_entered" from="catcher" to="." method="onBodyEntered"]

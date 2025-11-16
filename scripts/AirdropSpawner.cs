@@ -14,7 +14,9 @@ public partial class AirdropSpawner : Node2D
 
     public override void _Process(double delta)
     {
-        _step = 5 - Global.TimeInGame / 120;
+        _step = 5 - Global.TimeInGame / 30;
+        GD.Print(Global.TimeInGame);
+        GD.Print(_step);
     }
 
     private void onTimeout()

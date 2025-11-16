@@ -12,3 +12,11 @@ offset_bottom = 36.0
 theme_override_fonts/font = ExtResource("1_i2gav")
 theme_override_font_sizes/font_size = 20
 text = "HP: 100/100"
+
+[node name="Ability label" type="Label" parent="."]
+offset_left = -1.0
+offset_right = 259.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("1_i2gav")
+theme_override_font_sizes/font_size = 20
+text = "CURRENT ABILITY: REGENERATION"

@@ -19,11 +19,28 @@ public partial class Gun : Sprite2D
             bullet.Direction = direction;
 
             GetTree().Root.AddChild(bullet);
+
+            if (Global.CurrentAbility == AbilityEnum.MULTISHOT)
+            {
+                Bullet bullet2 = packedBullet.Instantiate<Bullet>();
+                Bullet bullet3 = packedBullet.Instantiate<Bullet>();
+
+                bullet2.Scale = new Vector2(2f, 2f);
+                bullet3.Scale = new Vector2(2f, 2f);
+
+                bullet2.GlobalPosition = GlobalPosition;
+                bullet3.GlobalPosition = GlobalPosition;
+
+                bullet2.Direction = direction.Rotated(Mathf.DegToRad(30));
+                bullet3.Direction = direction.Rotated(Mathf.DegToRad(-30));
+
+                GetTree().Root.AddChild(bullet2);
+                GetTree().Root.AddChild(bullet3);
+            }
         }
 
         Vector2 aim = GetGlobalMousePosition() - GlobalPosition;
         float angle = aim.Angle();
-        GD.Print(angle);
         if (aim.X < -5)
         {
             FlipH = true;

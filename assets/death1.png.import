@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvqq16me0kpb1"
-path="res://.godot/imported/ability_regenration.png-07caad15ed77b20eee779820eea69767.ctex"
+uid="uid://1n3xne48tf66"
+path="res://.godot/imported/death1.png-8fa6b24858c241d5cbcfe9109a581bee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/abilities/ability_regenration.png"
-dest_files=["res://.godot/imported/ability_regenration.png-07caad15ed77b20eee779820eea69767.ctex"]
+source_file="res://assets/death1.png"
+dest_files=["res://.godot/imported/death1.png-8fa6b24858c241d5cbcfe9109a581bee.ctex"]
 
 [params]
 
